@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 30px;
+        }
+        header{
+            position: fixed;
+            z-index: 100;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        .card .image{
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+        .card .image img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @media screen and (max-width: 990px) {
+            .container{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        .product{
+            margin-top: 20px;
+        }
+        .fa-cart-shopping{
+            color: aliceblue;
+        }
+        .btn-primary{
+            position: relative;
+        }
+        .cardShopping{
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: red;
+            border-radius: 50%;
+            top: 2px;
+            right: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+              </ul>
+              <a href="#" class="aCard">
+                <button type="button" class="btn btn-primary">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <div class="cardShopping">0</div>
+                </button>
+              </a>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+    </header>
+    <div class="container">
+        <div class="mt-20 product">
+            <div class="card" style="width: 18rem;">
+                <div class="image">
+                    <img class="card-img-top" src="anh1.1.jpg" alt="Card1 image cap">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Sản phẩm 1</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <buttom type="submit" class="btn btn-primary">Thêm vào giỏ hàng</buttom>
+                </div>
+              </div>
+        </div>
+        <div class="mt-20 product">
+            <div class="card" style="width: 18rem;">
+                <div class="image">
+                    <img class="card-img-top" src="anh1.1.jpg" alt="Card1 image cap">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Sản phẩm 2</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <buttom type="submit" class="btn btn-primary">Thêm vào giỏ hàng</buttom>
+                </div>
+              </div>
+        </div>
+        <div class="mt-20 product">
+            <div class="card" style="width: 18rem;">
+                <div class="image">
+                    <img class="card-img-top" src="anh1.1.jpg" alt="Card1 image cap">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Sản phẩm 3</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <buttom type="submit" class="btn btn-primary">Thêm vào giỏ hàng</buttom>
+                </div>
+              </div>
+        </div>
+        <div class="mt-20 product">
+            <div class="card" style="width: 18rem;">
+                <div class="image">
+                    <img class="card-img-top" src="anh1.1.jpg" alt="Card1 image cap">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Sản phẩm 4</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <buttom type="submit" class="btn btn-primary">Thêm vào giỏ hàng</buttom>
+                </div>
+              </div>
+        </div>
+        <div class="mt-20 product">
+            <div class="card" style="width: 18rem;">
+                <div class="image">
+                    <img class="card-img-top" src="anh1.1.jpg" alt="Card1 image cap">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Sản phẩm 5</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <buttom type="submit" class="btn btn-primary">Thêm vào giỏ hàng</buttom>
+                </div>
+              </div>
+        </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
+</body>
+<script>
+    var btn =document.querySelectorAll("buttom");
+    var aCard = document.querySelector('.aCard');
+    aCard.addEventListener("click", (e)=>{
+        e.preventDefault();
+        window.location.href ='cart.html';
+    })
+    var array = new Array();
+    btn.forEach((item)=>{
+        item.addEventListener("click", ()=>{
+            var card = item.parentElement;
+            var product = card.parentElement;
+            var img = product.querySelector('img').src;
+            var h5 = card.querySelector('h5').innerText;
+            var productItem = addObject(img,h5); 
+            array.push(productItem);
+            var json = JSON.stringify(array);
+            localStorage.setItem('product', json);
+            showCard();
+        })
+    })
+    function showCard(){
+        var jsonAr = localStorage.getItem('product');
+        if(jsonAr == null){
+            array = [];
+        }
+        else{
+            array = JSON.parse(jsonAr);
+            var cartShop = document.querySelector('.cardShopping');
+            cartShop.innerHTML = `${array.length}`;
+        }
+    }
+    showCard();
+    function addObject(img,h5){
+        var sanpham = new Object();
+        sanpham.img = img;
+        sanpham.h5 = h5;
+        return sanpham;
+    }
+</script>
+</html>
